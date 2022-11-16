@@ -6,8 +6,8 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
+  "author": "Ekateryna Sholomickaya",
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -32,5 +32,8 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",
     "webpack-obfuscator": "^3.5.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1"
   }
 }
