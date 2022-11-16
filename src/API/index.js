@@ -1,4 +1,4 @@
-import { drawCaption } from "../index";
+import { drawCaption } from "../utils/drawCaption";
 
 class Api {
 
@@ -9,7 +9,11 @@ class Api {
         .then(response => response.json())
         .then(json => {
             console.log(json);
-            drawCaption('Пришел ответ с сервера','blue')
+            const caption = document.querySelector('.caption');
+            if (!caption){
+              drawCaption('Пришел ответ с сервера','blue')
+            }
+
         })
   }
 }
