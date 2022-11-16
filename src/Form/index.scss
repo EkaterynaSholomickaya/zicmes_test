@@ -1,0 +1,80 @@
+@import '../styles/vars.scss';
+
+
+.form{
+  margin: 0 auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:3px 15px;
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:$buttonColor;
+    transform: skewX(-30deg);
+    border:none;
+    width: 130px;
+    min-width: 100px;
+    height: 30px;
+    border: 1px solid $mainGrey;
+  
+    span{
+      display: block;
+      transform: skewX(30deg);
+      color: $buttonCaption;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+
+  &__button:hover{
+    cursor: pointer;
+  }
+
+  &__label {
+    display: inline-flex;
+    transform: skewX(-30deg);
+    background-color:  $secondaryGery;
+    max-width: 280px;
+    width: 60%;
+    height: 30px;
+    padding-left: 20px;
+    border:none;
+    border: 1px solid $mainGrey;
+  }
+
+  &__input {
+    display: inline-block;
+    background-color: transparent;
+    transform: skewX(30deg);
+  }
+  
+}
+
+
+@media screen and (max-width: 479px) {
+  .form{
+    
+   &__button {
+      transform: skewX(0deg);
+       span{
+        transform: skewX(0deg);
+      }
+    }
+    &__label {
+      transform: skewX(0deg);
+      width: 80%;
+    }
+    &__input {
+      transform: skewX(0deg);
+    }
+
+  }
+}
+
+i {
+  color: $mainGrey;
+}
