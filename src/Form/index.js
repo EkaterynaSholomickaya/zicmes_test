@@ -4,7 +4,7 @@ class Form {
   static createForm() {
     const form = document.createElement('form');
     form.innerHTML = `    
-      <form class="form" action="#" >
+      <form class="form" action="#">
         <label class="form__label">
           <input type="text" class="form__input" placeholder="Ваш номер">
         </label>

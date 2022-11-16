@@ -37,24 +37,32 @@ function startWork(){
 
 
 function buttonEvent(e){
+
     e.preventDefault();
+
     const input = document.querySelector('.form__input');
-    const form = document.querySelector('.form');
  
     if(input.value){
         Api.requestToJSONPlaceholder();
     }
     else {
-        form.classList.add('filed');  
         const caption = document.querySelector('.caption');    
         
         if (!caption){
-            let caption = document.createElement('span');
-            caption.classList.add('caption');
-            caption.innerText = `Введите, пожалуйста, телефон!!!`;
-            form.after(caption);}
+            drawCaption(`Введите, пожалуйста, телефон!!!`, 'red')
+        }
 
     }
     
 }
 
+
+
+export function drawCaption(text, color){
+    const form = document.querySelector('.form');
+    let caption = document.createElement('div');
+    caption.classList.add('caption');
+    caption.style.color = color; 
+    caption.innerText = text;
+    form.after(caption);
+}
